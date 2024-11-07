@@ -20,7 +20,7 @@ A simple Laravel 11.x Inventory Management System that demonstrates MVC architec
 
 ```bash
 git clone https://github.com/MaharC2307/Lab8.git
-cd inventory-management
+cd Lab8
 composer install
 ```
 
