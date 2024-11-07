@@ -1,65 +1,86 @@
-Inventory Management System
-A basic Inventory Management System built with Laravel 11.x that demonstrates core concepts of MVC architecture, routing, middleware, and deployment with Podman.
+# Inventory Management System
 
-Features
-Create, update, and delete inventory items (including name, category, quantity, and price)
-View inventory items in a structured format
-Requirements
-PHP >= 8.0
-Composer
-MySQL
-Podman
-Setup
-1. Clone and Install Dependencies
-bash
-Copy code
-git clone https://github.com/yourusername/inventory-management.git
+A simple Laravel 11.x Inventory Management System that demonstrates MVC architecture, routing, middleware, and Podman deployment.
+
+## Features
+
+-   Add, update, and delete inventory items (name, category, quantity, price)
+-   View items in an organized format
+
+## Requirements
+
+-   PHP >= 8.0
+-   Composer
+-   MySQL
+-   Podman
+
+## Setup
+
+### 1. Clone and Install
+
+```bash
+git clone https://github.com/MaharC2307/Lab8.git
 cd inventory-management
 composer install
-2. Configure Environment
-Copy the environment file and configure your settings:
+```
 
-bash
-Copy code
+### 2. Configure Environment
+
+Copy and update `.env`:
+
+```bash
 cp .env.example .env
-Set up your database credentials in the .env file:
+```
 
-plaintext
-Copy code
+Set up your database credentials:
+
+```plaintext
 DB_CONNECTION=mysql
 DB_DATABASE=inventory_management
 DB_USERNAME=your_username
 DB_PASSWORD=your_password
-Generate the application key:
+```
 
-bash
-Copy code
+Generate an application key:
+
+```bash
 php artisan key:generate
-3. Migrate Database
-Run migrations to create database tables:
+```
 
-bash
-Copy code
+### 3. Migrate Database
+
+Run migrations to set up tables:
+
+```bash
 php artisan migrate
-4. Run the Application
-To start the server locally:
+```
 
-bash
-Copy code
+### 4. Run the Application
+
+Start the server locally:
+
+```bash
 php artisan serve
-Or, to deploy with Podman, create a Dockerfile and podman-compose.yml file.
+```
 
-Build and run containers:
+Or deploy with Podman:
 
-bash
-Copy code
-podman-compose up -d
-Access the application at http://localhost:8000.
+1. Create a `Dockerfile` and `podman-compose.yml`.
+2. Build and run containers:
 
-Folder Structure
-app/Models/Inventory.php - Model for inventory items
-app/Http/Controllers/InventoryController.php - Controller for CRUD operations
-resources/views/inventory - Blade templates for UI
-routes/web.php - Application routes
-License
-This project is licensed under the MIT License.
+    ```bash
+    podman-compose up -d
+    ```
+
+Access the app at `http://localhost:8000`.
+
+## Folder Structure
+
+-   `app/Models/Inventory.php` - Inventory model
+-   `app/Http/Controllers/InventoryController.php` - CRUD operations
+-   `resources/views/inventory` - Blade templates
+-   `routes/web.php` - Routes
+
+## License
+
+Licensed under the MIT License.
